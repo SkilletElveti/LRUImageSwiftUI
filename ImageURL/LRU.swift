@@ -8,6 +8,14 @@
 import Foundation
 import UIKit
 import Combine
+
+//Psuedo Code
+//recentNode.previous.next = recentNode.next
+//recentNode.next.previous = node.previous
+//recentNode.next = head
+//head.previous = node
+//head = node
+
 public actor LRUV2 {
     public static let shared = LRUV2()
     var tailRevokePublisher: CurrentValueSubject<URL?,Never> = .init(nil)
