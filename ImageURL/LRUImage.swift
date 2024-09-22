@@ -110,6 +110,28 @@ class LRUDriver: ObservableObject {
     }
 }
 
+class ObservableExample: ObservableObject {
+    @Published var number: Int = 0
+    func updateValue() {
+        self.number += 1
+    }
+}
+
+
+struct ExampleView: View {
+    @StateObject var observableExample = ObservableExample()
+    var body: some View {
+        VStack {
+            Text("\(observableExample.number)")
+            Button {
+                observableExample.updateValue()
+            } label : {
+                Text("Update")
+            }
+        }
+    }
+}
+
 //If isDownloading {
    //PLACEHOLDER_UI
     //.onReceive(driver.$dContext, perform: {
@@ -119,3 +141,4 @@ class LRUDriver: ObservableObject {
 //} else if let local {
     // Display Image using Async Image UI
 //}
+
