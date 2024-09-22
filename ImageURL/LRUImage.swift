@@ -131,3 +131,14 @@ struct ExampleView: View {
         }
     }
 }
+
+//If isDownloading {
+   //PLACEHOLDER_UI
+    //.onReceive(driver.$dContext, perform: {
+ // update local url var
+        // set isDownloading to false
+   //})
+//} else if let local {
+    // Display Image using Async Image UI
+//}
+
